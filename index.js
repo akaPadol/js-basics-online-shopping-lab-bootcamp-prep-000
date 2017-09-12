@@ -87,13 +87,15 @@ function total() {
 }
 
 function removeFromCart(item) {
-  for (var ele in cart){
-    if(cart[ele]===item){delete cart[ele]
+
+    if(cart.hasOwnProperty(item)){
+      delete cart[ele]
       console.log("That item is not in your cart.");
       return cart
     }
 
-  }
+  } 
+  return cart
 
 
 }
