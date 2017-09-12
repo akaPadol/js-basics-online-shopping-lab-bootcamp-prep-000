@@ -94,7 +94,7 @@ function removeFromCart(item) {
     }
 
   }
-  delete cart[item]
+  
   return cart
 }
 
