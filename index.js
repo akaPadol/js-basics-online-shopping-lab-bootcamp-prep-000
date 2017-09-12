@@ -31,6 +31,7 @@ function addToCart(item) {
 function viewCart() {
   var i = countProperties(cart);
   var res='In your cart, you have '
+  var count = 0
   if ( i === 0){return "Your shopping cart is empty."}
   switch(i) {
     case 1:
@@ -41,7 +42,7 @@ function viewCart() {
 
         break;
     case 2:
-      let count = 0
+       count = 0
     for (var key in cart){
 
       res+= key+" at "+cart[key]+(count ===1 ? " and " : "")
@@ -50,7 +51,7 @@ function viewCart() {
 
         break;
     default:
-      let count = 0
+       count = 0
       for (var key in cart){
 
         res+= key+" at "+cart[key]+", "+(count === (i-2) ? " and " : "")
