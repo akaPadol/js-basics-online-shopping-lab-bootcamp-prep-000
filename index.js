@@ -59,7 +59,7 @@ function viewCart() {
        count = 0
       for (var key in cart){
 
-        res+= key+" at $"+cart[key]+(count === (i-2) ? ", and " : ", ")
+        res+= key+" at $"+cart[key]+(count === (i-2) ? ", and " : ((count = i-1)?"":", "))
         ++count
       }
         break;
