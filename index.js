@@ -49,7 +49,7 @@ function viewCart() {
        count = 0
     for (var key in cart){
 
-      res+= key+" at $"+cart[key]+(count ===1 ? " and " : "")
+      res+= key+" at $"+cart[key]+(count ===0 ? " and " : "")
       ++count
     }
 
