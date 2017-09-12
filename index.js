@@ -60,6 +60,7 @@ function viewCart() {
         break;
 }
 res+="."
+return res
 }
 
 function countProperties(obj) {
