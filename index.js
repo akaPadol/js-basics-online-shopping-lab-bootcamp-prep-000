@@ -72,11 +72,12 @@ function countProperties(obj) {
 
 
 function total() {
-  // write your code here
+ return countProperties(cart)
 }
 
 function removeFromCart(item) {
-  // write your code here
+  delete cart[item]
+  return cart
 }
 
 function placeOrder(cardNumber) {
