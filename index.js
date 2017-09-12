@@ -35,27 +35,27 @@ function viewCart() {
   switch(i) {
     case 1:
           for (var key in cart){
-            
+
             res+= key+" at "+cart[key]
           }
-         
+
         break;
     case 2:
       let count = 0
     for (var key in cart){
-      
+
       res+= key+" at "+cart[key]+(count ===1 ? " and " : "")
       ++count
     }
-    
+
         break;
     default:
       let count = 0
       for (var key in cart){
-      
+
         res+= key+" at "+cart[key]+", "+(count === (i-2) ? " and " : "")
         ++count
-      } 
+      }
         break;
 }
 res+="."
