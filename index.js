@@ -17,7 +17,7 @@ function setCart(c) {
     + Upon the successful addition of a new item to the cart, the function should print `<itemName> has been added to your cart.` to the console and then `return` the updated `cart`.*/
 
 function addToCart(item) {
- cart[item]="$"+Math.floor((Math.random() * 100) + 1);
+ cart[item]=Math.floor((Math.random() * 100) + 1);
  console.log(item+" has been added to your cart.");
  return cart;
 }
@@ -39,7 +39,7 @@ function viewCart() {
     case 1:
           for (var key in cart){
 
-            res+= key+" at "+cart[key]
+            res+= key+" at $"+cart[key]
           }
 
         break;
@@ -47,7 +47,7 @@ function viewCart() {
        count = 0
     for (var key in cart){
 
-      res+= key+" at "+cart[key]+(count ===1 ? " and " : "")
+      res+= key+" at $"+cart[key]+(count ===1 ? " and " : "")
       ++count
     }
 
@@ -56,7 +56,7 @@ function viewCart() {
        count = 0
       for (var key in cart){
 
-        res+= key+" at "+cart[key]+", "+(count === (i-2) ? " and " : "")
+        res+= key+" at $"+cart[key]+", "+(count === (i-2) ? " and " : "")
         ++count
       }
         break;
@@ -72,7 +72,11 @@ function countProperties(obj) {
 
 
 function total() {
- return countProperties(cart)
+  var money = 0
+    for (var all in cart){
+      money+=cart[all]
+    }
+ return money
 }
 
 function removeFromCart(item) {
@@ -81,5 +85,5 @@ function removeFromCart(item) {
 }
 
 function placeOrder(cardNumber) {
-  // write your code here
+  return ((cardNumber === "" ) ? "Sorry, we don't have a credit card on file for you." : "Your total cost is $"+ total() +", which will be charged to the card "+cardNumber+".")
 }
