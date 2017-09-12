@@ -24,6 +24,7 @@ function addToCart(item) {
 addToCart("gas")
 console.log(cart.gas);
 addToCart("liqueur")
+addToCart("spirit")
 console.log(countProperties(cart));
 console.log(viewCart());
 /*2. The `viewCart()` function does not accept any arguments. It should loop over every item in your cart, printing out the contents as one long, coherent statement in this format: `In your cart, you have bananas at $17, pancake batter at $5, and eggs at $49.`
