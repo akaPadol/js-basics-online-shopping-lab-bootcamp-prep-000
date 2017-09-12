@@ -92,5 +92,5 @@ function removeFromCart(item) {
 }
 
 function placeOrder(cardNumber) {
-  return ((cardNumber === void ) ? "Sorry, we don't have a credit card on file for you." : "Your total cost is $"+ total() +", which will be charged to the card "+cardNumber+".")
+  return ((cardNumber === 0 ) ? "Sorry, we don't have a credit card on file for you." : "Your total cost is $"+ total() +", which will be charged to the card "+cardNumber+".")
 }
