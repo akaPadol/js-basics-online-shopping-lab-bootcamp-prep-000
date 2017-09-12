@@ -93,12 +93,12 @@ function removeFromCart(item) {
       console.log("That item is not in your cart.");
       return cart
     }
-
+    return cart
   }
-  return cart
+  
 
 
-}
+
 
 function placeOrder(cardNumber = 0) {
   var res = ((cardNumber === 0 ) ? "Sorry, we don't have a credit card on file for you." : "Your total cost is $"+ total() +", which will be charged to the card "+cardNumber+".")
